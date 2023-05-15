@@ -118,6 +118,7 @@ bool VmState::init_cp(int new_cp) {
     dispatch = dt;
     return true;
   } else {
+    LOG(ERROR) << "Failed to load code page. Check if it's inited: " << new_cp;
     return false;
   }
 }
